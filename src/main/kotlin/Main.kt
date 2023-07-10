@@ -7,22 +7,22 @@ fun main() {
             if ((pay * 1 / 100) <= 0) {
                 pay - 1
             } else {
-                pay - pay * 1 / 100
+                (pay * 0.99).toInt()
             }
         } else {
             pay
         }
     } else if ((pay > 1000)&&(pay <= 10000)) {
         if (isRegularCustomer) {
-            (pay - 100) * 1 / 100
+            ((pay - 100) * 0.99).toInt()
         } else {
             pay -= 100
         }
     } else {
         if (isRegularCustomer) {
-            pay - pay * 5 / 100 * 1 / 100
+            (pay * 0.95 * 0.99).toInt()
         } else {
-            pay - pay * 5 / 100
+            (pay * 0.95).toInt()
         }
     }
 
